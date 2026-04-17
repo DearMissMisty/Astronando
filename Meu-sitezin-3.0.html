@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Meu Sitezin</title>
+    <style>
+        body {
+            background-image: url(https://i.pinimg.com/1200x/c8/5d/5b/c85d5b3bbcd161948ac0ec0e30feb7c1.jpg);
+            font-family: 'Courier New', Courier, monospace; 
+            margin: 60px;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: azure;
+            font-size: 50px;
+        }
+        p {
+            color: azure;
+            font-size: 20px;
+        }
+
+        button {
+            background-color: rgb(18, 17, 27);
+            color: azure;
+            border: 1px solid azure;
+            border-radius: 10px;
+            padding: 12px 20px;
+            font-size: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            transition: 0.3s;
+        }
+        button:hover {
+            display: block;
+            filter: drop-shadow(0 0 10px azure);
+            background-color: azure;
+            color: rgb(18, 17, 27);
+            border: 1px solid rgb(18, 17, 27);
+        }
+        .container {
+            display: stretch;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+        }
+        .buttons p {
+            color: azure;
+            font-size: 18px;
+            margin: 5px 0 0 0;
+            display: none;
+        }
+        #def0, #def1, #def2, #def3, #def4 {
+            margin-top: 20px;
+            background-color: #12111b;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            color: azure;
+        }
+        #obs {
+            margin-top: 60px;
+            font-size: 15px;
+            color: azure;
+        }
+        link {
+            color: azure;
+            font-size: 18px;
+            text-decoration: none;
+            border: 1px solid azure;
+            padding: 10px 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Glossário de Astronomia</h1>
+    <p> <b>Definição</b> de astros e corpos celestes <br> para iniciantes em <b>astronomia!</b></p>
+    <div class="container">
+        <div class="buttons">
+            <button onclick="clicou(0)">Asterismo</button>
+            <p id="def0"></p>
+            <button onclick="clicou(1)">Aglomerado globular</button>
+            <p id="def1"></p>
+            <button onclick="clicou(2)">Precessão</button>
+            <p id="def2"></p>
+            <button onclick="clicou(3)">Ascessão reta/declinação</button>
+            <p id="def3"></p>
+            <button onclick="clicou(4)">Eclíptica</button>
+            <p id="def4"></p>
+        </div>
+    </div>
+    <script>
+        function clicou(numero) {
+            var p = document.getElementById("def" + numero);
+            if (p.style.display === "block") {
+                p.style.display = "none";
+            } else {
+                if (numero === 0) {
+                    p.innerHTML = "Asterismo é um <i>agrupamento de estrelas</i> visto como uma forma, semelhante a uma constelação, ou <i>parte de uma constelação</i>.";
+                    p.innerHTML += "<br><img src='https://starwalk.space/gallery/images/constellations-all-you-want-to-know/1920x1080.jpg' alt='Asterismo' width='500' height='350' style='padding-top: 20px'>";
+                } else if (numero === 1) {
+                    p.innerHTML = "Aglomerado globular é uma <i>coleção densa de milhares de estrelas muito antigas</i>. Globular aberto: menos densos, inclui dezenas a centenas de estrelas <b>jovens e quentes</b>.";
+                    p.innerHTML += "<br><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1h7_NGFGnuCijzCPhdEWiVgzY-msZiwcG_YOswG1E-ce73vgc5OQ3hj8&s=10' alt='Aglomerado globular' width='500' height='350' style='padding-top: 20px'>";
+                } else if (numero === 2) {
+                    p.innerHTML = "Precessão é a <b>oscilação no eixo da Terra</b> que altera sua orientação <i>em relação às estrelas</i>.";
+                 p.innerHTML += "<br><img src='https://sophiaofnature.wordpress.com/wp-content/uploads/2014/10/the_south_celestial_pole.jpg' alt='Precessão' width='500' height='350' style='padding-top: 20px'>";
+                } else if (numero === 3) {
+                p.innerHTML = "Ascessão reta ou declinação são termos utilizados <br> para <ins> localizar objetos no céu </ins>. Ascessão reta é a coordenada equivalente à <mark style='background-color: #625e8a; color: white;'>longitude</mark>, enquanto declinação é a coordenada equivalente à <mark style='background-color: #625e8a; color: white ;'>latitude</mark>.";
+                    p.innerHTML += "<br><img src='https://starwalk.space/gallery/images/coordinates-preview-2/1920x1080.jpg' alt='Ascessão reta/declinação' width='500' height='300' style='padding-top: 20px'>";
+                } else if (numero === 4) {
+                    p.innerHTML = "Eclíptica é a linha que traça o caminho anual aparente do sol ao redor da esfera/abóboda celeste.";
+                    p.innerHTML += "<br><img src='https://starwalk.space/gallery/images/ecliptic-celestial-equator/pt/1920x1080.jpg' alt='Eclíptica' width='500' height='300' style='padding-top: 20px'>";
+                }
+                p.style.display = "block";
+            }
+        }
+    </script>
+<p id="obs">OBS: Clique nos botões uma vez para ver as definições <br> e clique novamente para ocultá-las.<br>Clique no astronauta para desbloquear uma mensagem secreta!<br></p>
+<a href="https://i.pinimg.com/736x/f9/12/bd/f912bd5c12aa7682f1d41734a598cf1f.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="https://pngimg.com/uploads/astronaut/astronaut_PNG69.png" alt="Link para o site" width="200" height="250" style="margin-top: 40px;">
+</a>
+</body>
+</html>
