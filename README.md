@@ -1,2 +1,2 @@
-# Astronando
+# Site de Astronomia
 Astronando Project
